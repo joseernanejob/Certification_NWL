@@ -1,4 +1,4 @@
-package com.rockeseat.certification_nlw;
+package com.rocketseat.certification_nlw;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

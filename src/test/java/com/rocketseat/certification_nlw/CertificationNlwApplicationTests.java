@@ -1,4 +1,4 @@
-package com.rockeseat.certification_nlw;
+package com.rocketseat.certification_nlw;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
