@@ -1,4 +1,4 @@
-package com.rocketseat.certification_nlw.modules.questions.controllers;
+package com.rocketseat.certification_nlw.modulesV1.questions.controllers;
 
 import java.util.List;
 
@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.rocketseat.certification_nlw.mapper.Mapper;
-import com.rocketseat.certification_nlw.modules.questions.dto.QuestionResultDTO;
-import com.rocketseat.certification_nlw.modules.questions.repositories.QuestionRepository;
+import com.rocketseat.certification_nlw.modulesV1.questions.dto.QuestionResultDTO;
+import com.rocketseat.certification_nlw.modulesV1.questions.repositories.QuestionRepository;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
-@RequestMapping("/questions")
+@RequestMapping("/v1/questions")
 public class QuestionController {
 
   @Autowired

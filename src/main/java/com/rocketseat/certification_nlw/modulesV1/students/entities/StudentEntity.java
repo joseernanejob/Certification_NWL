@@ -1,4 +1,4 @@
-package com.rocketseat.certification_nlw.modules.students.entities;
+package com.rocketseat.certification_nlw.modulesV1.students.entities;
 
 import java.util.List;
 import java.util.UUID;

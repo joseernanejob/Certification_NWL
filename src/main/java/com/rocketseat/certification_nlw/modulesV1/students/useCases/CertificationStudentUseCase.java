@@ -1,24 +1,23 @@
-package com.rocketseat.certification_nlw.modules.students.useCases;
+package com.rocketseat.certification_nlw.modulesV1.students.useCases;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.rocketseat.certification_nlw.modules.questions.entities.AlternativeEntity;
-import com.rocketseat.certification_nlw.modules.questions.entities.QuestionEntity;
-import com.rocketseat.certification_nlw.modules.questions.repositories.QuestionRepository;
-import com.rocketseat.certification_nlw.modules.students.dtos.CreateCertificationDTO;
-import com.rocketseat.certification_nlw.modules.students.dtos.VerifyHasCertificationDTO;
-import com.rocketseat.certification_nlw.modules.students.entities.AnswersCertificationEntity;
-import com.rocketseat.certification_nlw.modules.students.entities.CertificationsStudentEntity;
-import com.rocketseat.certification_nlw.modules.students.entities.StudentEntity;
-import com.rocketseat.certification_nlw.modules.students.repositories.CertificationStudentRepository;
-import com.rocketseat.certification_nlw.modules.students.repositories.StudentRepository;
+import com.rocketseat.certification_nlw.modulesV1.questions.entities.AlternativeEntity;
+import com.rocketseat.certification_nlw.modulesV1.questions.entities.QuestionEntity;
+import com.rocketseat.certification_nlw.modulesV1.questions.repositories.QuestionRepository;
+import com.rocketseat.certification_nlw.modulesV1.students.dtos.CreateCertificationDTO;
+import com.rocketseat.certification_nlw.modulesV1.students.dtos.VerifyHasCertificationDTO;
+import com.rocketseat.certification_nlw.modulesV1.students.entities.AnswersCertificationEntity;
+import com.rocketseat.certification_nlw.modulesV1.students.entities.CertificationsStudentEntity;
+import com.rocketseat.certification_nlw.modulesV1.students.entities.StudentEntity;
+import com.rocketseat.certification_nlw.modulesV1.students.repositories.CertificationStudentRepository;
+import com.rocketseat.certification_nlw.modulesV1.students.repositories.StudentRepository;
 
 @Service
 public class CertificationStudentUseCase {

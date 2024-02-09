@@ -1,4 +1,4 @@
-package com.rocketseat.certification_nlw.modules.students.entities;
+package com.rocketseat.certification_nlw.modulesV1.students.entities;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

@@ -1,6 +1,4 @@
-package com.rocketseat.certification_nlw.modules.students.controllers;
-
-import java.util.List;
+package com.rocketseat.certification_nlw.modulesV1.students.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -10,18 +8,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rocketseat.certification_nlw.modules.questions.entities.AlternativeEntity;
-import com.rocketseat.certification_nlw.modules.students.dtos.AnswersCertificationDTO;
-import com.rocketseat.certification_nlw.modules.students.dtos.CreateCertificationDTO;
-import com.rocketseat.certification_nlw.modules.students.dtos.VerifyHasCertificationDTO;
-import com.rocketseat.certification_nlw.modules.students.entities.CertificationsStudentEntity;
-import com.rocketseat.certification_nlw.modules.students.entities.StudentEntity;
-import com.rocketseat.certification_nlw.modules.students.repositories.StudentRepository;
-import com.rocketseat.certification_nlw.modules.students.useCases.CertificationStudentUseCase;
-import com.rocketseat.certification_nlw.modules.students.useCases.VerifyHasCertificationUseCase;
+import com.rocketseat.certification_nlw.modulesV1.students.dtos.CreateCertificationDTO;
+import com.rocketseat.certification_nlw.modulesV1.students.dtos.VerifyHasCertificationDTO;
+import com.rocketseat.certification_nlw.modulesV1.students.entities.CertificationsStudentEntity;
+import com.rocketseat.certification_nlw.modulesV1.students.useCases.CertificationStudentUseCase;
+import com.rocketseat.certification_nlw.modulesV1.students.useCases.VerifyHasCertificationUseCase;
 
 @RestController
-@RequestMapping("/students")
+@RequestMapping("/v1/students")
 public class StutendController {
 
   @Autowired
@@ -29,9 +23,6 @@ public class StutendController {
 
   @Autowired
   private CertificationStudentUseCase certificationStudentUseCase;
-
-  @Autowired
-  private StudentRepository studentRepository;
 
   @PostMapping("/verifyHasCertification")
   public ResponseEntity<String> verifyHasCertification(@RequestBody VerifyHasCertificationDTO data) {

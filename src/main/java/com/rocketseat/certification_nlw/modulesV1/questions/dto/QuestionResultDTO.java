@@ -1,4 +1,4 @@
-package com.rocketseat.certification_nlw.modules.questions.dto;
+package com.rocketseat.certification_nlw.modulesV1.questions.dto;
 
 import java.util.List;
 import java.util.UUID;

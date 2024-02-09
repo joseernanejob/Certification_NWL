@@ -1,4 +1,4 @@
-package com.rocketseat.certification_nlw.modules.questions.entities;
+package com.rocketseat.certification_nlw.modulesV1.questions.entities;
 
 import java.time.LocalDateTime;
 import java.util.List;
