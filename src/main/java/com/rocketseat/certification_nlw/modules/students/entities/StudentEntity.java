@@ -3,11 +3,13 @@ package com.rocketseat.certification_nlw.modules.students.entities;
 import java.util.List;
 import java.util.UUID;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,7 +27,7 @@ public class StudentEntity {
   @Column(length = 60, unique = true, nullable = false)
   private String email;
 
-  @OneToMany(mappedBy = "student")
+  @OneToMany(cascade = CascadeType.ALL, mappedBy = "student")
   private List<CertificationEntity> certifications;
 
 }
