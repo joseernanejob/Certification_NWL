@@ -2,7 +2,6 @@ package com.rocketseat.certification_nlw.modules.questions.services;
 
 import java.util.UUID;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
