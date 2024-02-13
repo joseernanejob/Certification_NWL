@@ -52,11 +52,11 @@ public class QuestionServices {
   }
 
   public List<QuestionResultDTO> findAllByTechnology(String technology) {
-    this.verifyTechnology(technology);
-    List<QuestionResultDTO> questions = Mapper.parseListObjects(questionRepository.findAllByTechnology(technology),
-        QuestionResultDTO.class);
+    List<QuestionEntity> questions = questionRepository.findByTechnology(technology);
+    if (questions.isEmpty())
+      throw new NotFoundException("Não existe questões para a tecnologia " + technology);
 
-    return questions;
+    return Mapper.parseListObjects(questions, QuestionResultDTO.class);
   }
 
   public void delete(UUID id) {
@@ -69,8 +69,4 @@ public class QuestionServices {
 
   }
 
-  public void verifyTechnology(String technology) {
-    questionRepository.findByTechnology(technology)
-        .orElseThrow(() -> new NotFoundException("Não existe questões para a tecnologia " + technology));
-  }
 }
