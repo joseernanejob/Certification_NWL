@@ -60,10 +60,9 @@ public class AlternativeServices {
           "Impossível atualizar o campo 'isCorrect' para false, primeiro atualize o campo 'isCorrect' para true de outra alternativa.",
           HttpStatus.BAD_REQUEST);
 
+    QuestionEntity question = questionRepository.findById(data.getQuestionId())
+        .orElseThrow(() -> new NotFoundException("Questão com o id " + data.getQuestionId() + " não encontrada."));
     if (!alternative.getIsCorrect() && data.getIsCorrect()) {
-      QuestionEntity question = questionRepository.findById(data.getQuestionId())
-          .orElseThrow(() -> new NotFoundException("Questão com o id " + data.getQuestionId() + " não encontrada."));
-
       AlternativeEntity alternativeQuestion = question.getAlternatives().stream()
           .filter(element -> element.getId() == data.getId()).findFirst().get();
 
@@ -90,7 +89,7 @@ public class AlternativeServices {
 
   public AlternativeEntity findById(UUID id) {
     return alternativeRepository.findById(id)
-        .orElseThrow(() -> new NotFoundException(("Alternativa com id " + " não encontrada.")));
+        .orElseThrow(() -> new NotFoundException(("Alternativa com id " + id + " não encontrada.")));
   }
 
   public void delete(UUID id) {
